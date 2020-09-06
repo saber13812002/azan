@@ -160,22 +160,7 @@ function _azan_menu(){
 }
 function azan_menu(){
 	?>
-    <script src="http://api.mygeoposition.com/api/geopicker/api.js" type="text/javascript"></script>
-    
-    <script type="text/javascript">
-        function lookupGeoData() {            
-            myGeoPositionGeoPicker({
-                startAddress     : 'Mashhad, Khorasan Razavi, Iran',
-                returnFieldMap   : {
-                                     'geoposition1a' : '<LAT>',
-                                     'geoposition1b' : '<LNG>',
-                                     'geoposition1c' : '<CITY>',   /* ...or <COUNTRY>, <STATE>, <DISTRICT>,
-                                                                           <CITY>, <SUBURB>, <ZIP>, <STREET>, <STREETNUMBER> */
-                                     'geoposition1d' : '<ADDRESS>'
-                                   }
-            });
-        }
-    </script>
+
     <div class="updated settings-error"><p><strong>
 		 <?php _e('Select your city and add it to list,so you can choose it inside widget(first hit picker and then search your city,then click return data button)' ,'azan');?>
 	</strong></p></div>
@@ -206,7 +191,7 @@ function azan_menu(){
     <?php _e('Longitude' , 'azan'); ?>:<input name="azan-lng" id="geoposition1b" size="20" type="text">
     <input name="azan-city" id="geoposition1c" size="20" type="text">
     <!-- <input name="geoposition1d" id="geoposition1d" size="70" type="text"> -->
-    <button type="button" class="button-primary" onclick="lookupGeoData();">1:<?php _e('GeoPicker' ,'azan'); ?></button>
+    <button type="button" class="button-primary" >1:<?php _e('GeoPicker' ,'azan'); ?></button>
 	<input type="submit" class="button-primary" id="azan-add-me-to-list" value="2:<?php _e('save' , 'azan'); ?>">
 	<br>
 	<textarea style="width: 636px; height: 78px; background: none repeat scroll 0% 0% rgb(34, 34, 34); color: rgb(204, 204, 204); font-family: Lucida Console; direction: ltr ! important; text-align: left;" name="azan_custom_cities"><?php echo $azan_opt['azan_custom_cities']; ?></textarea>
